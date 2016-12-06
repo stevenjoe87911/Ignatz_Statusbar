@@ -8,10 +8,10 @@ Date:		2016-12-06
 [] spawn {
 	waituntil {!isnull (finddisplay 46) && alive player};
 	
-	Ignatz_StatusbarSelected = 		1;		// Status Bar on Start - 0 = off / 1 = full / 2 = half / 3 = small
+	Ignatz_StatusbarSelected = 	1;	// Status Bar on Start - 0 = off / 1 = full / 2 = half / 3 = small
 	Ignatz_StatusBarSwitchKey = 	0x36;	// Key to switch between the Status Bars (right shift key) full list: https://community.bistudio.com/wiki/DIK_KeyCodes
-	_RestartTime = 		3;					// in hours
-	_Restart_offset = 	-0.5; 				// in Minutes - if you restart some minutes earlier (kick players for example)
+	_RestartTime = 		3;		// in hours
+	_Restart_offset = 	-0.5; 		// in Minutes - if you restart some minutes earlier (kick players for example)
 	
 	_playersTxt = 		"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.6' shadowColor='#000000' image='addons\Ignatz_Statusbar\pics\players.paa' color='%17'/>%1</t>";
 	_energyTxt = 		"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.6' shadowColor='#000000' image='addons\Ignatz_Statusbar\pics\energy.paa' color='%17'/>%2</t>";
