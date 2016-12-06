@@ -1,6 +1,6 @@
 /*
 Status Bar for Epochmod
-Developed by: 	Darth_Rogue
+Developed by: 		Darth_Rogue
 Changed By:		[Ignatz] He-Man
 Date:			2016-12-06
 */
@@ -78,7 +78,7 @@ Date:			2016-12-06
 	13		_hours,
 	14		_minutes,
 	15		'%',
-	16		'°C',
+	16		'Â°C',
 	17		_colourDefault,
 	18		_colourEnergy,
 	19		_colourStamina,
@@ -423,7 +423,7 @@ Date:			2016-12-06
 			_hours,
 			_minutes,
 			'%',
-			'°C',
+			'Â°C',
 			_colourDefault,
 			_colourEnergy,
 			_colourStamina,
