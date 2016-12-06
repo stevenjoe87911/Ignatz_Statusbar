@@ -20,41 +20,41 @@ Date:		2016-12-06
 	_DamageTxt = 		"<t shadow='1' shadowColor='#000000' color='%20'><img size='1.6' shadowColor='#000000' image='addons\Ignatz_Statusbar\pics\damage.paa' color='%20'/>%5%15</t>";
 	_HungerTxt = 		"<t shadow='1' shadowColor='#000000' color='%21'><img size='1.6' shadowColor='#000000' image='addons\Ignatz_Statusbar\pics\hunger.paa' color='%21'/>%6%15</t>";
 	_ThirstTxt = 		"<t shadow='1' shadowColor='#000000' color='%22'><img size='1.6' shadowColor='#000000' image='addons\Ignatz_Statusbar\pics\thirst.paa' color='%22'/>%7%15</t>";
-	_TempTxt = 			"<t shadow='1' shadowColor='#000000' color='%23'><img size='1.1' shadowColor='#000000' image='addons\Ignatz_Statusbar\pics\temp.paa' color='%23'/> %8%16</t>";
+	_TempTxt = 		"<t shadow='1' shadowColor='#000000' color='%23'><img size='1.1' shadowColor='#000000' image='addons\Ignatz_Statusbar\pics\temp.paa' color='%23'/> %8%16</t>";
 	_ToxicTxt = 		"<t shadow='1' shadowColor='#000000' color='%24'><img size='1.6' shadowColor='#000000' image='addons\Ignatz_Statusbar\pics\toxicity.paa' color='%24'/>%9</t>";
 	_BloodTxt = 		"<t shadow='1' shadowColor='#000000' color='%25'><img size='1.3' shadowColor='#000000' image='addons\Ignatz_Statusbar\pics\blood.paa' color='%25'/>%10</t>";
-	_GPSTxt =		 	"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.0' shadowColor='#000000' image='addons\Ignatz_Statusbar\pics\compass.paa' color='%17'/> %11</t>";
-	_FPSTxt = 			"<t shadow='1' shadowColor='#000000' color='%17'>FPS %12</t>";
+	_GPSTxt =		"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.0' shadowColor='#000000' image='addons\Ignatz_Statusbar\pics\compass.paa' color='%17'/> %11</t>";
+	_FPSTxt = 		"<t shadow='1' shadowColor='#000000' color='%17'>FPS %12</t>";
 	_RestartTxt = 		"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.6' shadowColor='#000000' image='addons\Ignatz_Statusbar\pics\restart.paa' color='%17'/>%13:%14</t>";
-	_blanks = 			"   ";			// Blanks for adjust the distance between the Icons
+	_blanks = 		"   ";	// Blanks for adjust the distance between the Icons
 	
 	_StatusbarTxt1 =	_playersTxt + _blanks +
-						_StaminaTxt + _blanks + 
-						_KryptoTxt + _blanks + 
-						_DamageTxt + _blanks + 
-						_HungerTxt + _blanks + 
-						_ThirstTxt + _blanks + 
-						_TempTxt + _blanks + 
-						_ToxicTxt + _blanks + 
-						_BloodTxt + _blanks + 
-						_GPSTxt + _blanks + 
-						_FPSTxt + _blanks + 
-						_RestartTxt;
+				_StaminaTxt + _blanks + 
+				_KryptoTxt + _blanks + 
+				_DamageTxt + _blanks + 
+				_HungerTxt + _blanks + 
+				_ThirstTxt + _blanks + 
+				_TempTxt + _blanks + 
+				_ToxicTxt + _blanks + 
+				_BloodTxt + _blanks + 
+				_GPSTxt + _blanks + 
+				_FPSTxt + _blanks + 
+				_RestartTxt;
 	_StatusbarTxt2 = 	_StaminaTxt + _blanks + 
-						_DamageTxt + _blanks + 
-						_HungerTxt + _blanks + 
-						_ThirstTxt + _blanks + 
-						_TempTxt + _blanks + 
-						_ToxicTxt + _blanks + 
-						_BloodTxt + _blanks + 
-						_GPSTxt + _blanks + 
-						_RestartTxt;
+				_DamageTxt + _blanks + 
+				_HungerTxt + _blanks + 
+				_ThirstTxt + _blanks + 
+				_TempTxt + _blanks + 
+				_ToxicTxt + _blanks + 
+				_BloodTxt + _blanks + 
+				_GPSTxt + _blanks + 
+				_RestartTxt;
 	_StatusbarTxt3 =	_StaminaTxt + _blanks +
-						_DamageTxt + _blanks + 
-						_HungerTxt + _blanks + 
-						_ThirstTxt + _blanks + 
-						_RestartTxt;
-						
+				_DamageTxt + _blanks + 
+				_HungerTxt + _blanks + 
+				_ThirstTxt + _blanks + 
+				_RestartTxt;
+					
 	_StatusbarPosY =	safezoneY+safezoneH-0.1;	// 10% from the bottom
 	_StatusbarHeight =	0.07;
 	_StatusbarWidth1 =	1.2;
