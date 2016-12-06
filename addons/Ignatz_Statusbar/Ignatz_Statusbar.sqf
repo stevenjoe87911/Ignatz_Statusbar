@@ -1,8 +1,8 @@
 /*
 Status Bar for Epochmod
-Developed by: 		Darth_Rogue
-Changed By:		[Ignatz] He-Man
-Date:			2016-12-06
+Developed by: 	Darth_Rogue
+Changed By:	[Ignatz] He-Man
+Date:		2016-12-06
 */
 
 [] spawn {
