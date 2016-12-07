@@ -8,3 +8,8 @@ This is a Player-Statusbar based on the Status Bar from Darth_Rogue with several
 - Added Bloodpressure
 - Removed Config (no longer needed)
 - ...
+
+
+2016-12-07
+- Added an option to enable / disable Switchkey
+- Added some more colours for toxic
