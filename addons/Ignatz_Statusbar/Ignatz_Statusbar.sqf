@@ -9,6 +9,7 @@ Date:			2016-12-06
 	waituntil {!isnull (finddisplay 46) && alive player};
 	
 	Ignatz_StatusbarSelected = 		1;		// Status Bar on Start - 0 = off / 1 = full / 2 = half / 3 = small
+	_UseSwitchKey =					false;	// Use SwitchKey to switch between different Status Bars
 	Ignatz_StatusBarSwitchKey = 	0x36;	// Key to switch between the Status Bars (right shift key) full list: https://community.bistudio.com/wiki/DIK_KeyCodes
 	_RestartTime = 		3;					// in hours
 	_Restart_offset = 	-0.5; 				// in Minutes - if you restart some minutes earlier (kick players for example)
@@ -95,16 +96,21 @@ Date:			2016-12-06
 
 	disableSerialization;
 	_display = finddisplay 46;
-	_display displayaddeventhandler ['keydown',{
-		if ((_this select 1) == Ignatz_StatusBarSwitchKey) then {
-			Ignatz_StatusbarSelected = switch Ignatz_StatusbarSelected do {
-				case 0: {1};
-				case 1: {2};
-				case 2:	{3};
-				case 3: {0};
+	if (_UseSwitchKey) then {
+		_display displayaddeventhandler ['keydown',{
+			if ((_this select 1) == Ignatz_StatusBarSwitchKey) then {
+				Ignatz_StatusbarSelected = switch Ignatz_StatusbarSelected do {
+					case 0: {1};
+					case 1: {2};
+					case 2:	{3};
+					case 3: {0};
+				};
 			};
-		};
-	}];
+		}];
+	}
+	else {
+		Ignatz_StatusBarSwitchKey = nil;
+	};
 	
 	_Ignatz_StatusbarActive = 0;
 	_tempblink = 	false;
@@ -232,13 +238,17 @@ Date:			2016-12-06
 		else {
 			switch true do {
 				case (_bloodpressure < 110) : {_colourBloodP =  _colour100;};
-				case ((_bloodpressure >= 110) && (_bloodpressure < 130)) : {_colourBloodP =  _colour80;};
-				case ((_bloodpressure >= 130) && (_bloodpressure < 150)) : {_colourBloodP =  _colour60;};
-				case ((_bloodpressure >= 150) && (_bloodpressure < 180)) : {_colourBloodP =  _colour40;};
-				case ((_bloodpressure >= 180) && (_bloodpressure < 190)) : {_colourBloodP =  _colour20;};
+				case ((_bloodpressure >= 110) && (_bloodpressure < 120)) : {_colourBloodP =  _colour90;};
+				case ((_bloodpressure >= 120) && (_bloodpressure < 130)) : {_colourBloodP =  _colour80;};
+				case ((_bloodpressure >= 130) && (_bloodpressure < 140)) : {_colourBloodP =  _colour70;};
+				case ((_bloodpressure >= 140) && (_bloodpressure < 150)) : {_colourBloodP =  _colour50;};
+				case ((_bloodpressure >= 150) && (_bloodpressure < 160)) : {_colourBloodP =  _colour40;};
+				case ((_bloodpressure >= 160) && (_bloodpressure < 170)) : {_colourBloodP =  _colour30;};
+				case ((_bloodpressure >= 170) && (_bloodpressure < 180)) : {_colourBloodP =  _colour20;};
+				case ((_bloodpressure >= 180) && (_bloodpressure < 190)) : {_colourBloodP =  _colour10;};
 				case (_bloodpressure >= 190) : {_colourBloodP =  _colourDead;};
 			};
-			if (_bloodpressure > 140) then {
+			if (_bloodpressure > 150) then {
 				_bloodpblink = true;
 			}
 			else {
