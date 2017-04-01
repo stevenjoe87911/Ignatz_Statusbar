@@ -2,14 +2,14 @@
 Status Bar for Epochmod
 Developed by:	Darth_Rogue
 Changed By:		[Ignatz] He-Man
-Date:			2016-12-06
+Date:			2017-04-01
 */
 
 [] spawn {
 	waituntil {!isnull (finddisplay 46) && alive player};
 	
 	Ignatz_StatusbarSelected = 		1;		// Status Bar on Start - 0 = off / 1 = full / 2 = half / 3 = small
-	_UseSwitchKey =					false;	// Use SwitchKey to switch between different Status Bars
+	Ignatz_UseStatusBarSwitchKey =	false;	// Use SwitchKey to switch between different Status Bars
 	Ignatz_StatusBarSwitchKey = 	0x36;	// Key to switch between the Status Bars (right shift key) full list: https://community.bistudio.com/wiki/DIK_KeyCodes
 	_RestartTime = 		3;					// in hours
 	_Restart_offset = 	-0.5; 				// in Minutes - if you restart some minutes earlier (kick players for example)
@@ -96,22 +96,6 @@ Date:			2016-12-06
 
 	disableSerialization;
 	_display = finddisplay 46;
-	if (_UseSwitchKey) then {
-		_display displayaddeventhandler ['keydown',{
-			if ((_this select 1) == Ignatz_StatusBarSwitchKey) then {
-				Ignatz_StatusbarSelected = switch Ignatz_StatusbarSelected do {
-					case 0: {1};
-					case 1: {2};
-					case 2:	{3};
-					case 3: {0};
-				};
-			};
-		}];
-	}
-	else {
-		Ignatz_StatusBarSwitchKey = nil;
-	};
-	
 	_Ignatz_StatusbarActive = 0;
 	_tempblink = 	false;
 	_damageblink = 	false;
