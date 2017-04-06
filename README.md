@@ -8,3 +8,8 @@ This is a Player-Statusbar based on the Status Bar from Darth_Rogue with several
 - Added Bloodpressure
 - Removed Config (no longer needed)
 - ...
+
+Changelog:
+2017-04-06
+- Updated to new Epoch custom functions
+- Resorted file structure
