@@ -9,7 +9,7 @@ This is a Player-Statusbar based on the Status Bar from Darth_Rogue with several
 - Removed Config (no longer needed)
 - ...
 
-Battleye Filters:\n
+Battleye Filters:\r
 scripts.txt:\n
 7 "BIS_fnc_dynamictext" !="_Ignatz_dyn spawn BIS_fnc_dynamicText"
 7 ctrlCreate !="_display ctrlCreate [\"RscStructuredText\", 10000]"
