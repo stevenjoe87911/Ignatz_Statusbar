@@ -8,29 +8,30 @@ Date:			2017-04-06
 [] spawn {
 	waituntil {!isnull (finddisplay 46) && alive player};
 	
-	Ignatz_StatusbarSelected 		= 1;			/* Status Bar on Start - 0 = off / 1 = full / 2 = half / 3 = small */
-	Ignatz_UseStatusBarSwitchKey 	= false;		// Use SwitchKey to switch between different Status Bars
-	Ignatz_StatusBarSwitchKey 		= 0x36;			/* Key to switch between the Status Bars (right shift key) full list: https://community.bistudio.com/wiki/DIK_KeyCodes */
-	_RestartTime 					= 3;			/* in hours */
-	_Restart_offset 				= -120; 		/* in seconds - if you restart some seconds earlier (kick players for example) */
-	_RestartWarningTimes 			= [1,2,5,10];	/* Array of restart-warning (x minutes before Restart) */
+	Ignatz_StatusbarSelected = 		1;			/* Status Bar on Start - 0 = off / 1 = full / 2 = half / 3 = small */
+	Ignatz_UseStatusBarSwitchKey 	= false;	/* Use SwitchKey to switch between different Status Bars */
+	Ignatz_StatusBarSwitchKey = 	0x36;		/* Key to switch between the Status Bars (right shift key) full list: https://community.bistudio.com/wiki/DIK_KeyCodes */
+	_RestartTime = 					3;			/* in hours */
+	_Restart_offset = 				-120; 		/* in seconds - if you restart some seconds earlier (kick players for example) */
+	_RestartWarningTimes =			[1,2,5,10];	/* Array of restart-warning (x minutes before Restart) */
 	
-	_playersTxt = 		"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.6' shadowColor='#000000' image='addons\Ignatz_Statusbar\pics\players.paa' color='%17'/>%1</t>";
-	_energyTxt = 		"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.6' shadowColor='#000000' image='addons\Ignatz_Statusbar\pics\energy.paa' color='%17'/>%2</t>";
-	_StaminaTxt = 		"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.6' shadowColor='#000000' image='addons\Ignatz_Statusbar\pics\stamina.paa' color='%19'/>%3</t>";
-	_KryptoTxt = 		"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.6' shadowColor='#000000' image='addons\Ignatz_Statusbar\pics\krypto.paa' color='%17'/>%4</t>";
-	_DamageTxt = 		"<t shadow='1' shadowColor='#000000' color='%20'><img size='1.6' shadowColor='#000000' image='addons\Ignatz_Statusbar\pics\damage.paa' color='%20'/>%5%15</t>";
-	_HungerTxt = 		"<t shadow='1' shadowColor='#000000' color='%21'><img size='1.6' shadowColor='#000000' image='addons\Ignatz_Statusbar\pics\hunger.paa' color='%21'/>%6%15</t>";
-	_ThirstTxt = 		"<t shadow='1' shadowColor='#000000' color='%22'><img size='1.6' shadowColor='#000000' image='addons\Ignatz_Statusbar\pics\thirst.paa' color='%22'/>%7%15</t>";
-	_TempTxt = 			"<t shadow='1' shadowColor='#000000' color='%23'><img size='1.1' shadowColor='#000000' image='addons\Ignatz_Statusbar\pics\temp.paa' color='%23'/> %8%16</t>";
-	_ToxicTxt = 		"<t shadow='1' shadowColor='#000000' color='%24'><img size='1.6' shadowColor='#000000' image='addons\Ignatz_Statusbar\pics\toxicity.paa' color='%24'/>%9</t>";
-	_BloodTxt = 		"<t shadow='1' shadowColor='#000000' color='%25'><img size='1.3' shadowColor='#000000' image='addons\Ignatz_Statusbar\pics\blood.paa' color='%25'/>%10</t>";
-	_GPSTxt =			"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.0' shadowColor='#000000' image='addons\Ignatz_Statusbar\pics\compass.paa' color='%17'/> %11</t>";
+	_playersTxt = 		"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.6' shadowColor='#000000' image='addons\pics\Statusbar\players.paa' color='%17'/>%1</t>";
+	_energyTxt = 		"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.6' shadowColor='#000000' image='addons\pics\Statusbar\energy.paa' color='%17'/>%2</t>";
+	_StaminaTxt = 		"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.6' shadowColor='#000000' image='addons\pics\Statusbar\stamina.paa' color='%19'/>%3</t>";
+	_KryptoTxt = 		"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.6' shadowColor='#000000' image='addons\pics\Statusbar\krypto.paa' color='%17'/>%4</t>";
+	_DamageTxt = 		"<t shadow='1' shadowColor='#000000' color='%20'><img size='1.6' shadowColor='#000000' image='addons\pics\Statusbar\damage.paa' color='%20'/>%5%15</t>";
+	_HungerTxt = 		"<t shadow='1' shadowColor='#000000' color='%21'><img size='1.6' shadowColor='#000000' image='addons\pics\Statusbar\hunger.paa' color='%21'/>%6%15</t>";
+	_ThirstTxt = 		"<t shadow='1' shadowColor='#000000' color='%22'><img size='1.6' shadowColor='#000000' image='addons\pics\Statusbar\thirst.paa' color='%22'/>%7%15</t>";
+	_TempTxt = 			"<t shadow='1' shadowColor='#000000' color='%23'><img size='1.1' shadowColor='#000000' image='addons\pics\Statusbar\temp.paa' color='%23'/> %8%16</t>";
+	_ToxicTxt = 		"<t shadow='1' shadowColor='#000000' color='%24'><img size='1.6' shadowColor='#000000' image='addons\pics\Statusbar\toxicity.paa' color='%24'/>%9</t>";
+	_BloodTxt = 		"<t shadow='1' shadowColor='#000000' color='%25'><img size='1.3' shadowColor='#000000' image='addons\pics\Statusbar\blood.paa' color='%25'/>%10</t>";
+	_GPSTxt =			"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.0' shadowColor='#000000' image='addons\pics\Statusbar\compass.paa' color='%17'/> %11</t>";
 	_FPSTxt = 			"<t shadow='1' shadowColor='#000000' color='%17'>FPS %12</t>";
-	_RestartTxt = 		"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.6' shadowColor='#000000' image='addons\Ignatz_Statusbar\pics\restart.paa' color='%17'/>%13:%14</t>";
-	_blanks = 			"   ";	// Blanks for adjust the distance between the Icons
-	
-	_StatusbarTxt1 =	_playersTxt + _blanks +
+	_RestartTxt = 		"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.6' shadowColor='#000000' image='addons\pics\Statusbar\restart.paa' color='%17'/>%13:%14</t>";
+	_blanks = 			"   ";	/* Blanks for adjust the distance between the Icons */
+
+	_StatusbarTxt1 =	
+						_playersTxt + _blanks +
 						_StaminaTxt + _blanks + 
 						_KryptoTxt + _blanks + 
 						_DamageTxt + _blanks + 
@@ -42,7 +43,9 @@ Date:			2017-04-06
 						_GPSTxt + _blanks + 
 						_FPSTxt + _blanks + 
 						_RestartTxt;
-	_StatusbarTxt2 = 	_StaminaTxt + _blanks + 
+
+	_StatusbarTxt2 = 	
+						_StaminaTxt + _blanks + 
 						_DamageTxt + _blanks + 
 						_HungerTxt + _blanks + 
 						_ThirstTxt + _blanks + 
@@ -51,21 +54,23 @@ Date:			2017-04-06
 						_BloodTxt + _blanks + 
 						_GPSTxt + _blanks + 
 						_RestartTxt;
-	_StatusbarTxt3 =	_StaminaTxt + _blanks +
+
+	_StatusbarTxt3 =	
+						_StaminaTxt + _blanks +
 						_DamageTxt + _blanks + 
 						_HungerTxt + _blanks + 
 						_ThirstTxt + _blanks + 
 						_RestartTxt;
-					
-	_StatusbarPosY =	safezoneY+safezoneH-0.1;	// 10% from the bottom
+
+	_StatusbarPosY =	safezoneY+safezoneH-0.1;	/* 10% from the bottom */
 	_StatusbarHeight =	0.07;
 	_StatusbarWidth1 =	1.2;
 	_StatusbarWidth2 =	0.9;
 	_StatusbarWidth3 =	0.55;
-	_BackgrundColor =	[0,0,0,0.4];				// [RR,GG,BB,TRANSPARENCY]	RGB in 0-1!!!
+	_BackgrundColor =	[0,0,0,0.4];				/* [RR,GG,BB,TRANSPARENCY]	RGB in 0-1!!! */
 
 /*	
-	1		count allplayers,
+	1		count playableunits,
 	2		_energyPercent,
 	3		_stamina,
 	4		_wallet,
@@ -90,12 +95,11 @@ Date:			2017-04-06
 	23		_colourTemp,
 	24		_colourToxicity,
 	25		_colourBloodP
+/*
+End Config
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 */
-
-// End Config ///
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 	disableSerialization;
 	_display = finddisplay 46;
 	_Ignatz_StatusbarActive = 0;
@@ -134,6 +138,9 @@ Date:			2017-04-06
 		_StatusbarHeight
 	];
 	_Statusbar ctrlCommit 0.5;
+	
+	_minutes = -1;
+	_restart = false;
 	
 	while {true} do {
 		if (_Ignatz_StatusbarActive != Ignatz_StatusbarSelected) then {
@@ -184,7 +191,6 @@ Date:			2017-04-06
 				_Statusbar ctrlShow false;
 				_Statusbar ctrlSetText '';
 			};
-/*			waituntil {Ignatz_StatusbarSelected in [1,2,3]}; */
 		}
 		else {
 			uisleep 1;
@@ -227,7 +233,6 @@ Date:			2017-04-06
 		};
 		
 		if !(_Ignatz_StatusbarActive == 0) then {
-		
 			_temp = round((EPOCH_playerTemp-32)/1.8*10)/10;
 			_highestDMG = 0;
 			{
@@ -248,12 +253,6 @@ Date:			2017-04-06
 			_grid = mapGridPosition  player; 
 			_xx = (format[_grid]) select  [0,3]; 
 			_yy = (format[_grid]) select  [3,3];  
-			_time = (round(_RestartTime*60+_Restart_offset-serverTime/60)) max 0;
-			_hours = (floor(_time/60));
-			_minutes = (_time - (_hours * 60));
-			if (_minutes < 10) then {
-				_minutes = "0" + (str _minutes);
-			};
 			
 			_colourBloodP = _colourDefault;
 			if (_bloodpressure > 140 && _bloodpblink) then {
@@ -442,7 +441,7 @@ Date:			2017-04-06
 			};
 			
 			_Statusbar ctrlSetStructuredText parseText format ["<t align='center'>" + _bartext + "</t>",
-				count allplayers,
+				count playableunits,
 				_energyPercent,
 				_stamina,
 				_wallet,
