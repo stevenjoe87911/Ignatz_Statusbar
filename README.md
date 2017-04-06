@@ -13,3 +13,5 @@ Changelog:
 2017-04-06
 - Updated to new Epoch custom functions
 - Resorted file structure
+- Added Restart warnings
+- Added Realtime Restart Check
