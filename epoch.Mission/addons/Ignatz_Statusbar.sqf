@@ -8,26 +8,26 @@ Date:			2017-04-06
 [] spawn {
 	waituntil {!isnull (finddisplay 46) && alive player};
 	
-	Ignatz_StatusbarSelected = 		1;			/* Status Bar on Start - 0 = off / 1 = full / 2 = half / 3 = small */
-	Ignatz_UseStatusBarSwitchKey 	= false;	/* Use SwitchKey to switch between different Status Bars */
-	Ignatz_StatusBarSwitchKey = 	0x36;		/* Key to switch between the Status Bars (right shift key) full list: https://community.bistudio.com/wiki/DIK_KeyCodes */
-	_RestartTime = 					3;			/* in hours */
-	_Restart_offset = 				-120; 		/* in seconds - if you restart some seconds earlier (kick players for example) */
-	_RestartWarningTimes =			[1,2,5,10];	/* Array of restart-warning (x minutes before Restart) */
+	Ignatz_StatusbarSelected 		= 1;			/* Status Bar on Start - 0 = off / 1 = full / 2 = half / 3 = small */
+	Ignatz_UseStatusBarSwitchKey 	= true;			/* Use SwitchKey to switch between different Status Bars */
+	Ignatz_StatusBarSwitchKey 		= 0x36;			/* Key to switch between the Status Bars (right shift key) full list: https://community.bistudio.com/wiki/DIK_KeyCodes */
+	_RestartTime 					= 3;			/* in hours */
+	_Restart_offset 				= -120; 		/* in seconds - if you restart some seconds earlier (kick players for example) */
+	_RestartWarningTimes 			= [1,2,5,10];	/* Array of restart-warning (x minutes before Restart) */
 	
-	_playersTxt = 		"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.6' shadowColor='#000000' image='addons\pics\Statusbar\players.paa' color='%17'/>%1</t>";
-	_energyTxt = 		"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.6' shadowColor='#000000' image='addons\pics\Statusbar\energy.paa' color='%17'/>%2</t>";
-	_StaminaTxt = 		"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.6' shadowColor='#000000' image='addons\pics\Statusbar\stamina.paa' color='%19'/>%3</t>";
-	_KryptoTxt = 		"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.6' shadowColor='#000000' image='addons\pics\Statusbar\krypto.paa' color='%17'/>%4</t>";
-	_DamageTxt = 		"<t shadow='1' shadowColor='#000000' color='%20'><img size='1.6' shadowColor='#000000' image='addons\pics\Statusbar\damage.paa' color='%20'/>%5%15</t>";
-	_HungerTxt = 		"<t shadow='1' shadowColor='#000000' color='%21'><img size='1.6' shadowColor='#000000' image='addons\pics\Statusbar\hunger.paa' color='%21'/>%6%15</t>";
-	_ThirstTxt = 		"<t shadow='1' shadowColor='#000000' color='%22'><img size='1.6' shadowColor='#000000' image='addons\pics\Statusbar\thirst.paa' color='%22'/>%7%15</t>";
-	_TempTxt = 			"<t shadow='1' shadowColor='#000000' color='%23'><img size='1.1' shadowColor='#000000' image='addons\pics\Statusbar\temp.paa' color='%23'/> %8%16</t>";
-	_ToxicTxt = 		"<t shadow='1' shadowColor='#000000' color='%24'><img size='1.6' shadowColor='#000000' image='addons\pics\Statusbar\toxicity.paa' color='%24'/>%9</t>";
-	_BloodTxt = 		"<t shadow='1' shadowColor='#000000' color='%25'><img size='1.3' shadowColor='#000000' image='addons\pics\Statusbar\blood.paa' color='%25'/>%10</t>";
-	_GPSTxt =			"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.0' shadowColor='#000000' image='addons\pics\Statusbar\compass.paa' color='%17'/> %11</t>";
+	_playersTxt = 		"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.6' shadowColor='#000000' image='addons\pics\Ignatz_Statusbar\players.paa' color='%17'/>%1</t>";
+	_energyTxt = 		"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.6' shadowColor='#000000' image='addons\pics\Ignatz_Statusbar\energy.paa' color='%17'/>%2</t>";
+	_StaminaTxt = 		"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.6' shadowColor='#000000' image='addons\pics\Ignatz_Statusbar\stamina.paa' color='%19'/>%3</t>";
+	_KryptoTxt = 		"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.6' shadowColor='#000000' image='addons\pics\Ignatz_Statusbar\krypto.paa' color='%17'/>%4</t>";
+	_DamageTxt = 		"<t shadow='1' shadowColor='#000000' color='%20'><img size='1.6' shadowColor='#000000' image='addons\pics\Ignatz_Statusbar\damage.paa' color='%20'/>%5%15</t>";
+	_HungerTxt = 		"<t shadow='1' shadowColor='#000000' color='%21'><img size='1.6' shadowColor='#000000' image='addons\pics\Ignatz_Statusbar\hunger.paa' color='%21'/>%6%15</t>";
+	_ThirstTxt = 		"<t shadow='1' shadowColor='#000000' color='%22'><img size='1.6' shadowColor='#000000' image='addons\pics\Ignatz_Statusbar\thirst.paa' color='%22'/>%7%15</t>";
+	_TempTxt = 			"<t shadow='1' shadowColor='#000000' color='%23'><img size='1.1' shadowColor='#000000' image='addons\pics\Ignatz_Statusbar\temp.paa' color='%23'/> %8%16</t>";
+	_ToxicTxt = 		"<t shadow='1' shadowColor='#000000' color='%24'><img size='1.6' shadowColor='#000000' image='addons\pics\Ignatz_Statusbar\toxicity.paa' color='%24'/>%9</t>";
+	_BloodTxt = 		"<t shadow='1' shadowColor='#000000' color='%25'><img size='1.3' shadowColor='#000000' image='addons\pics\Ignatz_Statusbar\blood.paa' color='%25'/>%10</t>";
+	_GPSTxt =			"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.0' shadowColor='#000000' image='addons\pics\Ignatz_Statusbar\compass.paa' color='%17'/> %11</t>";
 	_FPSTxt = 			"<t shadow='1' shadowColor='#000000' color='%17'>FPS %12</t>";
-	_RestartTxt = 		"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.6' shadowColor='#000000' image='addons\pics\Statusbar\restart.paa' color='%17'/>%13:%14</t>";
+	_RestartTxt = 		"<t shadow='1' shadowColor='#000000' color='%17'><img size='1.6' shadowColor='#000000' image='addons\pics\Ignatz_Statusbar\restart.paa' color='%17'/>%13:%14</t>";
 	_blanks = 			"   ";	/* Blanks for adjust the distance between the Icons */
 
 	_StatusbarTxt1 =	
@@ -220,11 +220,13 @@ End Config
 		if ((_hours*60+_minutes) in _RestartWarningTimes)then {
 			if ((_hours*60+_minutes) == 1) then {
 				_msg = format ["<t size='1' color='#DA1700' align='center'>RESTART IN %1 MINUTE<br/>PLEASE LOGOUT NOW!</t>",_minutes]; 
-				[_msg,0,safezoneY + safezoneH/2,5,0.5] spawn BIS_fnc_dynamicText; 
+				_Ignatz_dyn = [_msg,0,safezoneY + safezoneH/2,5,0.5];
+				_Ignatz_dyn spawn BIS_fnc_dynamicText; 
 			}
 			else {
 				_msg = format ["<t size='0.7' color='#DA1700' align='left'>RESTART IN %1 MINUTES</t>",_minutes];  
-				[_msg,safezoneX+safezoneW/1.5,safezoneY+safezoneH/1.5,5,0.5] spawn BIS_fnc_dynamicText;
+				_Ignatz_dyn = [_msg,safezoneX+safezoneW/1.5,safezoneY+safezoneH/1.5,5,0.5];
+				_Ignatz_dyn spawn BIS_fnc_dynamicText;
 			};
 			_RestartWarningTimes = _RestartWarningTimes - [_hours*60+_minutes];
 		};
